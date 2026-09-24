@@ -22,10 +22,10 @@ public class Ejercicio7 {
             
             do{
                 System.out.print(" [JUGADOR X]: ¿En qué fila quieres colocar el símbolo X? {1, 2, 3}: ");
-                y1 = scanner.nextInt();
+                y1 = scanner.nextInt() -1;
                 scanner.nextLine();
                 System.out.print(" [JUGADOR X]: ¿En qué columna quieres colocar el símbolo X? {1, 2, 3}: ");
-                x1 = scanner.nextInt();
+                x1 = scanner.nextInt() -1;
                 scanner.nextLine();
             }while(tablero.esCasillaOcupada(y1, x1));
             
@@ -35,10 +35,10 @@ public class Ejercicio7 {
 
             do{
                 System.out.print(" [JUGADOR O]: ¿En qué fila quieres colocar el símbolo O? {1, 2, 3}: ");
-                y2 = scanner.nextInt();
+                y2 = scanner.nextInt() -1;
                 scanner.nextLine();
                 System.out.print(" [JUGADOR O]: ¿En qué columna quieres colocar el símbolo O? {1, 2, 3}: ");
-                x2 = scanner.nextInt();
+                x2 = scanner.nextInt() -1;
                 scanner.nextLine();
             }while(tablero.esCasillaOcupada(y2, x2));
             
@@ -51,5 +51,6 @@ public class Ejercicio7 {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        scanner.close();
     }
 }
